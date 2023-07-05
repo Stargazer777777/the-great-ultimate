@@ -1,7 +1,7 @@
-<template>hello world</template>
+<template>
+  <RouterView></RouterView>
+</template>
 
-<script lang="ts" setup>
-// console.log(import.meta.);
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss"></style>
