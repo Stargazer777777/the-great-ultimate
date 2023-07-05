@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    123
     <TheGreatUltimate></TheGreatUltimate>
   </div>
 </template>
