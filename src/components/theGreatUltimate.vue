@@ -19,7 +19,10 @@ interface Props {
 const props = defineProps<Props>();
 
 const cycle = computed(() => {
-  const frequency = props.frequency || 0.5;
+  let frequency = 0.5;
+  if (typeof props.frequency == 'number') {
+    frequency = props.frequency;
+  }
   return 1 / frequency;
 });
 
@@ -53,6 +56,7 @@ const cssCycle = computed(() => {
   background: linear-gradient(to right, #fff 50%, #000 50%);
   box-shadow: 0 0 30px 5px rgba($color: #000000, $alpha: 0.3);
   animation: rotate v-bind(cssCycle) linear infinite;
+  overflow: hidden;
   .outer-circle {
     display: flex;
     justify-content: center;
